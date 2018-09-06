@@ -4,17 +4,18 @@ class Judul extends React.Component{
 
 	render(){
 		return(
-			
-			<Text style={hayo.judul}>BIODATA GUE </Text>
-			
-			
+			<View>
+				<Text style={ini.judul}>{this.props.hayo}
+				</Text>
+				
+			</View>
 		
 
 			)
 	}
 
 }
-const hayo = {
+const ini = {
 	judul:{
 		color : "#1c4e8a",
 		 fontSize : 50,

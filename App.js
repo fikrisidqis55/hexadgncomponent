@@ -23,20 +23,16 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-      <Judul/>
-       <Image source={require('./fikri.jpg')} style={{width:240, height:300}} />
-      <Text>Siswa GUDMODE : FIKRI</Text>
-      <Text>XI RPL 3</Text>
-      <Text>No Absen 28 Cuyy</Text>
-        <Text style={styles.welcome}>
+
+          <Judul hayo = "BIODATA"/>
+          <Judul hayo = "JUDUL"/>
+          <Judul hayo = "APAAN DAH"/>
+          <Image source={require('./fikri.jpg')} style={{width:240, height:300}} />
+          <Text>Siswa GUDMODE : FIKRI</Text>
+          <Text>XI RPL 3</Text>
+          <Text>No Absen 28 Cuy</Text>
+      <Text style={styles.welcome}></Text>
           
-        </Text>
-        <Text style={styles.instructions}>
-          
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
       </View>
     );
   }
