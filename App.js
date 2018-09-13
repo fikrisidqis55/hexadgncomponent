@@ -13,6 +13,9 @@ import {
   Image
 } from 'react-native';
 import Judul from './Component/Judul';
+import Login from './Screen/Login';
+import Splash from './Screen/Splash';
+import Hal from './Screen/Hal';
 
 const instructions = Platform.select({
   
@@ -23,14 +26,11 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+      <Login/>
+      
+      
 
-          <Judul hayo = "BIODATA"/>
-          <Judul hayo = "JUDUL"/>
-          <Judul hayo = "APAAN DAH"/>
-          <Image source={require('./fikri.jpg')} style={{width:240, height:300}} />
-          <Text>Siswa GUDMODE : FIKRI</Text>
-          <Text>XI RPL 3</Text>
-          <Text>No Absen 28 Cuy</Text>
+          
       <Text style={styles.welcome}></Text>
           
       </View>

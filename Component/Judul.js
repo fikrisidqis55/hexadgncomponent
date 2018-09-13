@@ -5,9 +5,11 @@ class Judul extends React.Component{
 	render(){
 		return(
 			<View>
-				<Text style={ini.judul}>{this.props.hayo}
-				</Text>
-				
+		<Text style={ini.judul}>Hallo!!!</Text>
+        <Image source={require('./fikri.jpg')} style={{width:140, height:200}} />
+        <Text>Nama : Muhammad Fikri Sidqi</Text>
+        <Text>Kelas : XI RPL 3</Text>
+        <Text>No Absen : 28</Text>
 			</View>
 		
 
