@@ -7,8 +7,8 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text>LOGIN</Text>
-        <TextInput
+        <Text>iNi HALAMAN LOGiN</Text>
+                <TextInput
                     style={{height: 40,marginTop:50}}
                     placeholder="Username"
                     onChangeText={(text) => this.setState({text})}></TextInput>
@@ -19,7 +19,7 @@ class HomeScreen extends React.Component {
                     placeholder="Password"
                     onChangeText={(text) => this.setState({text})}></TextInput>
         <Button
-          title="Go to Details"
+          title="LOGIN JAL"
           onPress={() => {
             this.props.navigation.dispatch(StackActions.reset({
               index: 0,
