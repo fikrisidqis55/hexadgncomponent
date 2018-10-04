@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TextInput,Button,Image} from 'react-native';
+import Splash from './Splash';
+import { createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
 
 export default class Login extends Component{
 
     render(){
         return(
             <View style={styles.container}> 
-                <Text style={styles.title}>Login</Text>
+                <Text style={styles.title}>LOGIN</Text>
 
               
                 
@@ -20,9 +22,9 @@ export default class Login extends Component{
                     style={{height: 40}}
                     placeholder="Password"
                     onChangeText={(text) => this.setState({text})}></TextInput>
-                
 
                 <Button style ={{margin: 20,flexDirection: 'row',justifyContent: 'space-between'}}
+                onPress={() => this.props.navigation.navigate('HomeScreen')} title="Home"
                 title="Login"
                 color="#841584"
                 />
@@ -31,6 +33,8 @@ export default class Login extends Component{
         )
     }
 }
+
+
 
 const styles = StyleSheet.create({
     container: {

@@ -1,58 +1,57 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  Image
-} from 'react-native';
+import React from 'react';
+import { View, Text, Button, Image, TextInput } from 'react-native';
+import { createStackNavigator, StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 import Judul from './Component/Judul';
-import Login from './Screen/Login';
-import Splash from './Screen/Splash';
-import Hal from './Screen/Hal';
 
-const instructions = Platform.select({
-  
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-      <Login/>
-      
-      
+      <View>
+        <Text>LOGIN</Text>
+        <TextInput
+                    style={{height: 40,marginTop:50}}
+                    placeholder="Username"
+                    onChangeText={(text) => this.setState({text})}></TextInput>
+                
 
-          
-      <Text style={styles.welcome}></Text>
-          
+                <TextInput
+                    style={{height: 40}}
+                    placeholder="Password"
+                    onChangeText={(text) => this.setState({text})}></TextInput>
+        <Button
+          title="Go to Details"
+          onPress={() => {
+            this.props.navigation.dispatch(StackActions.reset({
+              index: 0,
+              actions: [
+                NavigationActions.navigate({ routeName: 'Details' })
+              ],
+            }))
+          }}
+        />
       </View>
     );
-  }
+  }  
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+class DetailsScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Judul/>
+      </View>
+    );
+  }  
+}
+
+export default createStackNavigator({
+  Home: {
+    screen: HomeScreen,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  Details: {
+    screen: DetailsScreen,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+}, {
+    initialRouteName: 'Home',
+
 });

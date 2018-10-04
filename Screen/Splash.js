@@ -5,7 +5,7 @@ export default class Splash extends Component{
     render(){
         return(
             <View style={styles.container}> 
-                <Text style={styles.title}>Halo, Ini Halaman Splash</Text>
+                <Text style={styles.title}>Halo, Ini Halaman Splashnyaa</Text>
             </View>
         )
     }
@@ -17,12 +17,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent :'center'
     },
-
     title: {
         fontWeight: 'bold',
         fontSize : 18,
         color:'black'
     }
-
-
 })
