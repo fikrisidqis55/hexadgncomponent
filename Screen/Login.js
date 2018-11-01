@@ -24,7 +24,7 @@ export default class Login extends Component{
                     onChangeText={(text) => this.setState({text})}></TextInput>
 
                 <Button style ={{margin: 20,flexDirection: 'row',justifyContent: 'space-between'}}
-                onPress={() => this.props.navigation.navigate('HomeScreen')} title="Home"
+                onPress={() => this.props.navigation.navigate('HomeScreen')}
                 title="Login"
                 color="#841584"
                 />

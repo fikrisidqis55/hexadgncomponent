@@ -4,12 +4,10 @@ class Judul extends React.Component{
 
 	render(){
 		return(
-			<View>
-		<Text style={ini.judul}>Hallo!!!</Text>
-        <Image source={require('./fikri.jpg')} style={{width:140, height:200}} />
-        <Text>Nama GUE : Muhammad Fikri Sidqi</Text>
-        <Text>Kelas : XI RPL 3</Text>
-        <Text>No Absen : 28</Text>
+			<View style={{ justifyContent:'center', alignItems:'center'}}>
+			<Image source={require('./RM.png')} style={{width:250, height:250}} />
+		<Text style={ini.judul}>SELAMAT DATANG!</Text>
+        
 			</View>
 		
 
@@ -20,8 +18,10 @@ class Judul extends React.Component{
 const ini = {
 	judul:{
 		color : "#1c4e8a",
-		 fontSize : 50,
-		 fontWeight: 'bold'
+		 fontSize : 30,
+		 fontWeight: 'bold',
+		 alignItems:'center',
+		 justifycontent:'center'
 	}
 
 }

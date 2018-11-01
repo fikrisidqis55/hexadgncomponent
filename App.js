@@ -6,20 +6,21 @@ import Judul from './Component/Judul';
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View>
-        <Text>iNi HALAMAN LOGiN</Text>
+      <View style={{ justifyContent:'center', alignItems:'center'}}>
+        
+        <Image source={require('./RM.png')} style={{ width:100, height:100}} />
                 <TextInput
-                    style={{height: 40,marginTop:50}}
+                    style={{width: 150,marginTop:50}}
                     placeholder="Username"
                     onChangeText={(text) => this.setState({text})}></TextInput>
                 
 
                 <TextInput
-                    style={{height: 40}}
+                    style={{width: 150}}
                     placeholder="Password"
                     onChangeText={(text) => this.setState({text})}></TextInput>
         <Button
-          title="LOGIN JAL"
+          title="LOGIN"
           onPress={() => {
             this.props.navigation.dispatch(StackActions.reset({
               index: 0,
